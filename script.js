@@ -7,7 +7,7 @@ const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 // Funkcja pobierająca wpisy i wyświetlająca je na stronie
 async function loadPosts() {
     const { data, error } = await supabase
-        .from("kuku") // <-- nazwa Twojej tabeli
+        .from("kuku") // nazwa Twojej tabeli
         .select("*")
         .order("id", { ascending: false });
 
